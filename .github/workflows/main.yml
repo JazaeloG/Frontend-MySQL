@@ -25,13 +25,13 @@ jobs:
           #file_name: .env
           #fail_on_empty: false
           
-      - name: build angular, output in dist/openai
-        run: |
-          npm run build
+      #- name: build angular, output in dist/openai
+        #run: |
+          #npm run build
       
-      - name: show dir, .env file
-        run: |
-          ls -la 
+      #- name: show dir, .env file
+        #run: |
+          #ls -la 
           
       - name: download, run httpd image, container name serving_base
         run: |
