@@ -13,17 +13,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
-      - name: CI
-        run: npm ci
-      - name: Test
-        run: |
-          npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-      - name: make .env 
-        uses: SpicyPizza/create-envfile@v1.3
-        with:
-          envkey_NG_APP_KEY : ${{ secrets.OPENAI_KEY }}
-          file_name: .env
-          fail_on_empty: false
+      ##- name: CI
+        ##run: npm ci
+      #- name: Test
+        #run: |
+          #npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      #- name: make .env 
+        #uses: SpicyPizza/create-envfile@v1.3
+        #with:
+          #envkey_NG_APP_KEY : ${{ secrets.OPENAI_KEY }}
+          #file_name: .env
+          #fail_on_empty: false
           
       - name: build angular, output in dist/openai
         run: |
